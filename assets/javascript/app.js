@@ -13,14 +13,14 @@ var quiz = [
     {
         question: "Inception was filmed in all of the following cities except:",
         answer: "Paris",
-        options: ["Tokyo", "Morocco", "Los Angeles", "Paris"]
+        options: ["Tokyo", "Tangier", "Los Angeles", "Berlin"]
     }
 ]
 var score = 0;
 var randomQuestion;
 
     //Handles the click event.
-    $("#question-section").on("click", "div", function(){
+    $("#question-section").on("click", "li", function(){
         var selection = $(this).text();
         if(selection === quiz[randomQuestion].answer){
             alert("Correct");
@@ -51,7 +51,7 @@ function nextQuestion() {
     newQuestion.html(quiz[randomQuestion].question);
     //Inserts the choices in the document.
     for(i = 0; i < quiz[randomQuestion].options.length; i++) {
-        var newOption = $('<div>');
+        var newOption = $('<li>');
         newOption.text(quiz[randomQuestion].options[i]);
         $('#question-section').append(newOption);
     }
