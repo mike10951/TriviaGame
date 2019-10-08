@@ -12,7 +12,7 @@ var quiz = [
     },
     {
         question: "Inception was filmed in all of the following cities except:",
-        answer: "Paris",
+        answer: "Berlin",
         options: ["Tokyo", "Tangier", "Los Angeles", "Berlin"]
     }
 ]
